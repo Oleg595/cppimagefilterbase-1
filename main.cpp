@@ -16,6 +16,7 @@ int main( int argc, char *argv[] )
         studTool.load(argv[2]);
         studTool.Paint(conf);
         studTool.save(argv[3]);
+        delete conf;
     }
     catch (const char *str)
     {
