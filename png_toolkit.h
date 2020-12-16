@@ -33,3 +33,4 @@ private:
 };
 
 #endif // PNG_TOOLKIT_H
+
