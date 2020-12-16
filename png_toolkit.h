@@ -4,8 +4,28 @@
 #include <string>
 #include <map>
 #include<fstream>
+#include<vector>
 #include "stb_image.h"
 using namespace std;
+//#include"Filters2/Config.h"
+
+struct Filter {
+    enum Fil_Name f_n;
+    int u;
+    int l;
+    int b;
+    int r;
+};
+
+class Config {
+public:
+    Config(string conf);
+    vector<Filter>* Fil();
+private:
+    vector<Filter>* filters;
+    string Read(string str, int* i);
+    enum Fil_Name Name(string str);
+};
 
 struct image_data
 {
@@ -50,24 +70,6 @@ enum Fil_Name {
     BLUR,
     EDGE,
     ERROR
-};
-
-struct Filter {
-    enum Fil_Name f_n;
-    int u;
-    int l;
-    int b;
-    int r;
-};
-
-class Config {
-public:
-    Config(string conf);
-    vector<Filter>* Fil();
-private:
-    vector<Filter>* filters;
-    string Read(string str, int* i);
-    enum Fil_Name Name(string str);
 };
 
 #endif // PNG_TOOLKIT_H
