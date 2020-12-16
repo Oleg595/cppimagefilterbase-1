@@ -1,6 +1,5 @@
 #include <iostream>
 #include "png_toolkit.h"
-#include"Filters2/Config.h"
 
 int main( int argc, char *argv[] )
 {
@@ -11,7 +10,7 @@ int main( int argc, char *argv[] )
         if (argc != 3)
             throw "Not enough arguments"; 
 
-        Config* conf = new Config(argv[1]);
+        Config* conf = new Config(argv[0]);
         png_toolkit studTool;
         studTool.load(argv[1]);
         studTool.Paint(conf);
