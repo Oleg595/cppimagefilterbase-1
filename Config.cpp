@@ -40,16 +40,16 @@ enum Fil_Name Config::Name(string str) {
 	if (str == "BLACKWHITE") {
 		return BLACK_WHITE;
 	}
-	if (str == "RED") {
+	if (str == "Red") {
 		return RED;
 	}
-	if (str == "THRESHOLD") {
+	if (str == "Threshold") {
 		return THRESHOLD;
 	}
-	if (str == "EDGE") {
+	if (str == "Edge") {
 		return EDGE;
 	}
-	if (str == "BLUR") {
+	if (str == "Blur") {
 		return BLUR;
 	}
 	return ERROR;
