@@ -11,7 +11,7 @@ int main( int argc, char *argv[] )
         if (argc != 4)
             throw "Not enough arguments"; 
 
-        Config* conf = new Config(argv[1]);
+        //Config* conf = new Config(argv[1]);
         png_toolkit studTool;
         studTool.load(argv[2]);
         //studTool.Paint(conf);
