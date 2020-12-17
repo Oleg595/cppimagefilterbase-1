@@ -145,3 +145,11 @@ void Filters::Paint(Config* conf) {
 		Paint_Filter(*i);
 	}
 }
+
+bool Filters::save(const std::string& pictureName)
+{
+	return stbi_write_png(pictureName.c_str(),
+		imgData.w, imgData.h,
+		imgData.compPerPixel,
+		imgData.pixels, 0) != 0;
+}

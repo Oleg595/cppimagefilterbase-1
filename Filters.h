@@ -1,6 +1,6 @@
 #pragma once
 #include"png_toolkit.h"
-//#include"stb_image.h"
+#include"stb_image_write.h"
 #include"Config.h"
 #include<algorithm>
 
@@ -10,6 +10,8 @@ public:
 	Filters(image_data data) {
 		imgData = data;
 	}
+
+    bool save(std::string const& pictureName);
 
     void Black_White(int start_x, int start_y, int finish_x, int finish_y);
     void Red(int start_x, int start_y, int finish_x, int finish_y);

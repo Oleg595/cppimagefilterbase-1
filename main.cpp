@@ -1,5 +1,5 @@
 #include <iostream>
-#include"Filters.h"
+#include"Filters2/Filters.h"
 
 int main( int argc, char *argv[] )
 {
@@ -15,7 +15,7 @@ int main( int argc, char *argv[] )
         studTool.load(argv[2]);
         Filters filters(studTool.getPixelData());
         filters.Paint(conf);
-        studTool.save(argv[3]);
+        filters.save(argv[3]);
         delete conf;
     }
     catch (const char *str)
